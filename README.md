@@ -1,5 +1,22 @@
 # Databricks-Kafka
 
+To stream data from Alpha Vantage and store it in Confluent Kafka , we will be fetching data from Alpha Vantage continuously and send to Kafka in real time. We  will use one Pyspark note book to simulate it
+Then we will create Databricks notebooks to consude data from Kafka topic and put in delta tables
+
+Prerequisistes
+1) Alpha Vantage API Key   2) Confluent Kafka Cluster     3) PySpark Environment in Databricks
+
+API used in this project is https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=demo
+
+Based on the Symbol we provide, we can get  the most recent 100 intraday OHLCV bars by default when the outputsize parameter is not set
+
+![image](https://github.com/user-attachments/assets/3d98972b-8e22-4a68-a7c6-f312214f73ba)
+
+ 
+To consume this API, we have to generate API Key by visiting https://www.alphavantage.co/support/#api-key  . It is free of cost. In free plan only 5 API request allowed per minute
+
+
+
 
 Created Kafka cluster in Confluent
 
