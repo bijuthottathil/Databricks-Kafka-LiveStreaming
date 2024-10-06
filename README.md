@@ -51,4 +51,9 @@ Need to create API key next
 ![image](https://github.com/user-attachments/assets/5fb2768c-f8e8-4f91-be6b-21d5984021a5)
 
 ![image](https://github.com/user-attachments/assets/9aabd8e1-74e1-40ad-85fa-404d41d16a95)
+![image](https://github.com/user-attachments/assets/b68a3c94-966c-4bb9-933c-ca7efb4c6f2f)
 
+
+Please make sure to note down below details to use in Databricks notebook to connect to Kafka
+
+![image](https://github.com/user-attachments/assets/e19d4025-f259-4d2a-80bc-2dc076049725)
