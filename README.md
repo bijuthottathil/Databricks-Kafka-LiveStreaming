@@ -57,3 +57,9 @@ Need to create API key next
 Please make sure to note down below details to use in Databricks notebook to connect to Kafka
 
 ![image](https://github.com/user-attachments/assets/e19d4025-f259-4d2a-80bc-2dc076049725)
+
+
+Instead of keeping few secret details in Key Vault, I used env variables in cluster to keep API Key, Kafka Server and Kafka Topic name. This is not adviced in prod
+
+![image](https://github.com/user-attachments/assets/3556d6c8-391d-4763-a0df-03672e91a557)
+
