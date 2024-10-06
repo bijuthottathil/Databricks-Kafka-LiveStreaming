@@ -16,6 +16,17 @@ Based on the Symbol we provide, we can get  the most recent 100 intraday OHLCV b
 To consume this API, we have to generate API Key by visiting https://www.alphavantage.co/support/#api-key  . It is free of cost. In free plan only 5 API request allowed per minute
 
 
+We are using Unity Catalog to store data in Medallion structure. So we setup ADLS Storage to store Metastore,Catalog, Schema, External tables,Checkpoints and External Volumes. Structure is like below
+![image](https://github.com/user-attachments/assets/e79bc015-56a6-4700-b621-6bddd8e3375e)
+
+Catalog and corresponding schema's are created in Databricks like this. All data will be pointing to corresponding external storages defined in Azure ADLS given below
+
+![image](https://github.com/user-attachments/assets/904b5401-57c8-4a4a-a246-09fcdfe118ae)
+
+External locations are defined in Databricks
+
+![image](https://github.com/user-attachments/assets/26b80ace-e0eb-47e4-95b2-20bf940bb8e4)
+
 
 
 Created Kafka cluster in Confluent
