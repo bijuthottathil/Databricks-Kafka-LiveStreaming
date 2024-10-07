@@ -1,4 +1,8 @@
-# Databricks-Kafka
+# Databricks- Live streaming with Kafka
+
+
+![image](https://github.com/user-attachments/assets/cd8cde7f-50e2-4b26-8216-ad19a405e63e)
+
 
 To stream data from Alpha Vantage and store it in Confluent Kafka , we will be fetching data from Alpha Vantage continuously and send to Kafka in real time. We  will use one Pyspark note book to simulate it
 Then we will create Databricks notebooks to consude data from Kafka topic and put in delta tables
