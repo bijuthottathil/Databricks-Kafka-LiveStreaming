@@ -58,7 +58,6 @@ Setup new client
 
 Need to create API key next
 
-![image](https://github.com/user-attachments/assets/5fb2768c-f8e8-4f91-be6b-21d5984021a5)
 
 ![image](https://github.com/user-attachments/assets/9aabd8e1-74e1-40ad-85fa-404d41d16a95)
 ![image](https://github.com/user-attachments/assets/b68a3c94-966c-4bb9-933c-ca7efb4c6f2f)
@@ -71,15 +70,27 @@ Please make sure to note down below details to use in Databricks notebook to con
 
 Instead of keeping few secret details in Key Vault, I used env variables in cluster to keep API Key, Kafka Server and Kafka Topic name. This is not adviced in prod
 
-![image](https://github.com/user-attachments/assets/3556d6c8-391d-4763-a0df-03672e91a557)
+I have created a key vault in Azure to store all required API_ID, Kafka Server, Kafka Username , Kafka Passoword and Topic name  .
 
-We will start with notebooks
+Note- Make sure to give access to service pricipal accees to "Azure Databricks"   "Key Vault Secrets User" . It will help to access key vault records from Databricks
+
+![image](https://github.com/user-attachments/assets/9d530c22-fd9f-4a18-8cd5-828742051ef5)
+
+
+![image](https://github.com/user-attachments/assets/3d824645-084c-4809-a3e1-0833fbe7137a)
+
+
+
+
+We will navigate to Databricks and start creating note books
+
 
 To load data in Kafka topic, I created one notebook. It will simulate data from API continuously to Topic
 
 Topic is ready. Appropriate configurations to connect to Kafka is mentioned in the notebook
 
-![image](https://github.com/user-attachments/assets/d9a4cc5c-4177-4f52-8ebe-06020c8b8f29)
+![image](https://github.com/user-attachments/assets/0280a6fb-879d-4b65-80f3-86c5e0029176)
+
 
 ![image](https://github.com/user-attachments/assets/4e08c177-b200-46b6-9163-82b53e9187fd)
 
@@ -97,7 +108,10 @@ I changed stock symbol to Google and loaded data. You can see more data loading 
 
 Now we have another Bronze note book I created to load data from Kafka Topic and load it in Bronze layer storage
 
-![image](https://github.com/user-attachments/assets/f1b25412-9d5b-4772-93bb-037f7263c09b)
+![image](https://github.com/user-attachments/assets/633cc252-6507-491b-8077-2297bd2987cd)
+
+
+
 
 ![image](https://github.com/user-attachments/assets/6164f618-cad0-4f18-b309-7707b8eae666)
 
@@ -170,4 +184,11 @@ You can see your tables
 By dragging and dropping you can create appropriate visualizations in Power Bi and publish to many destinations
 
 ![image](https://github.com/user-attachments/assets/333d3d4b-1431-407a-b743-ddc2b8f56d27)
+
+
+Next we will create a workflow (job) to execute these notebooks in a scheduled interval
+
+![image](https://github.com/user-attachments/assets/31693cf1-f15b-4e3e-9495-7943bd22a626)
+
+
 
